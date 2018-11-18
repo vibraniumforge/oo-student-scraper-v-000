@@ -20,6 +20,7 @@ class Scraper
               }
           end
           puts prices
+          binding.pry
       end
 
   end
