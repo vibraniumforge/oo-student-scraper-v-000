@@ -10,8 +10,8 @@ class Scraper
 
   class Scraper
       def page_scrape
-        url=https://goldprice.com/
-          list=Nokogiri::HTML(open(jurl))
+        url="https://goldprice.com/"
+          list=Nokogiri::HTML(open(url))
           prices=[]
           one_price={}
           list.css(".nfprice").each do |metal_price|
