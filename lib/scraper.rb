@@ -13,6 +13,7 @@ class Scraper
         url="https://goldprice.com/"
           list=Nokogiri::HTML(open(url))
           prices=[]
+          binding.pry
           list.css(".nfprice").each do |metal_price|
               prices<<  {
                   :name=>metal_price(".metal-title").text,
