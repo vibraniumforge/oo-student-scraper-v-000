@@ -15,7 +15,7 @@ class Scraper
           one_price={}
           list.css(".nfprice").each do |metal_price|
               prices<< one_price {
-                  :name=>metal_price(".metal-title").text
+                  :name=>metal_price(".metal-title").text,
                   :value=>metal_price(".nfprice").text
               }
           end
