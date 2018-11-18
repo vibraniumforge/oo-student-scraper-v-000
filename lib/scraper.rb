@@ -13,9 +13,8 @@ class Scraper
         url="https://goldprice.com/"
           list=Nokogiri::HTML(open(url))
           prices=[]
-          one_price={}
           list.css(".nfprice").each do |metal_price|
-              prices<< one_price {
+              prices<<  {
                   :name=>metal_price(".metal-title").text,
                   :value=>metal_price(".nfprice").text
               }
